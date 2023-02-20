@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script   src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Placement Cell</title>
+    <link rel = "icon" href = "/img/email.png" type = "image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <!-- Script of scrolling to slidebar of contact -->
+
+
+<script>
+    $(document).ready(function(){
+    $('.toggle').click(function(){
+    $('.sidebar-contact').toggleClass('active')
+    $('.toggle').toggleClass('active')
+    })
+    })
+
+</script>
+</head>
+<body>
+    <header>
+        <div class="h-container">
+            <div class="main-head">
+                <a class="navbar-brand" href="/">
+                    <div class="logo-image">
+                          <img src="/img/logo1.png" class="img-fluid">
+                    </div>        
+                </a>
+                <!-- <h6>PLACEMENT CELL</h6> -->
+                <nav class="nav">
+                    <ul>
+                        <li class="links"><a href="#home">Home</a></li>
+                        <li class="links"><a href="#stat">Statistics</a></li>
+                        <li class="links"><a href="#comp">Companies</a></li>
+                        <li class="links"><a href="#coord">Coordinatorss</a></li>
+                        <li class="links"><a href="#about">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="home">
+        <div class="welcometxt">
+            <h1>Welcome to Placement Cell</h1>
+        </div>        
+    </section>
+    <section id="stat" style="background-color: black;">
+        <div class="statxt">
+            <h3 style="text-align: center;"><br>Our Statistics</h3>
+        </div>
+        
+        <div class="stati" id="stati">         
+            <br><br>   
+            <h4 style="text-align: center;">Over the years</h4>
+            <div class="flex-div">
+                <h5 style="text-align: center;">Placement Percentage</h5>
+                <div class="stat-row">
+                    <div class="chart">
+                        <ul class="numbers">
+                          <li><span>100%</span></li>
+                          <li><span>50%</span></li>
+                          <li><span>0%</span></li>
+                        </ul>
+                        <ul class="bars">
+                          <li><div class="bar" data-percentage="70"></div><span>2019</span></li>
+                          <li><div class="bar" data-percentage="90"></div><span>2020</span></li>
+                          <li><div class="bar" data-percentage="95"></div><span>2021</span></li>
+                          <li><div class="bar" data-percentage="100"></div><span>2022</span></li>
+                          <li><div class="bar" data-percentage="80"></div><span>2023</span></li>
+                        </ul>
+                    </div>
+                    <!-- SCRIPT FOR THE GRAPH     -->
+                    <script type="text/javascript">
+                        $(function(){
+                          $('.bars li .bar').each(function(key, bar){
+                            var percentage = $(this).data('percentage');
+                            $(this).animate({
+                              'height' : percentage + '%'
+                            },1000);
+                          });
+                        });
+                    </script>
+                </div>            
+            </div>
+            </div>
+        <h3 style="text-align: center;"><br><br><br>Current Stats</h3>    
+        <!-- second one -->
+        <div class="wrapper">
+            <div class="container1">
+              <!-- <i class="fas fa-utensils"></i> -->
+              <span class="num" data-val="400">000</span>
+              <span class="text">STUDENTS PLACED (LAST TWO YEARS)</span>
+            </div>
+            <div class="container1">
+              <!-- <i class="fas fa-smile-beam"></i> -->
+              <span class="num" data-val="340">000</span>
+              <span class="text">RECRUITING COMPANIES</span>
+            </div>
+            <div class="container1">
+              <!-- <i class="fas fa-list"></i> -->
+              <span class="num" data-val="225">000</span>
+              <span class="text">PLACEMENT DRIVES (LAST TWO YEARS)</span>
+            </div>
+            <div class="container1">
+              <!-- <i class="fas fa-star"></i> -->
+              <span class="num" data-val="280">000</span>
+              <span class="text">HIGHEST SALARY PACKAGE AVAILED</span>
+            </div>
+        </div>
+        <script>
+            let valueDisplays = document.querySelectorAll(".num");
+            let interval = 4000;
+            valueDisplays.forEach((valueDisplay) => {
+                let startValue = 0;
+                let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+                let duration = Math.floor(interval / endValue);
+                let counter = setInterval(function () {
+                    startValue += 1;
+                    valueDisplay.textContent = startValue;
+                    if (startValue == endValue) {
+                        clearInterval(counter);
+                    }
+                }, duration);
+            });
+        </script>
+    </section>
+    
+    <section class="RecruiterSlider" id="comp">
+        <img class="pagetear" src="img/overlay-top.png" alt="">
+        <br><br>   
+        <h2 style="text-align: center;">Our Recruiters</h2>
+        <div class="slider">
+                <div class="slider-images">
+                <img  class="imgDiv" src="img/Recruiters/Allianz...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/AlohaTech...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/AlphaTechLogo...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/Amzur..new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/CapGemini...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/CTSLogo...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/ExperionTech...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/FederalBank_Logo...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/IBMLogo...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/InfosysLogo..new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/MindTreeLogo..new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/SIBLogo...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/SperdianTech....new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/TataElxsi...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/TCS..new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/TechMahindraLogo....new.PNG" alt="">
+                <img class="imgDiv" src="img/Recruiters/Allianz...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/AlohaTech...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/AlphaTechLogo...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/Amzur..new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/CapGemini...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/CTSLogo...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/ExperionTech...new.png" alt="">
+                <img class="imgDiv" src="img/Recruiters/FederalBank_Logo...new.png" alt="">
+                </div>
+        </div>
+        <br>
+        <img class="pagetear" src="img/overlay-bottom.png" alt="">
+    </section>
+
+    <section id="coord">
+        <br><br>   
+        <h2 style="text-align: center;">Placement Coordinators</h2><br><br><br>
+        <div class="Coordinators" style="align-items: center;">
+            <div class="card">
+                <img src="img/sabeen.jpg" alt="Avatar" style="width:200px;height: 100%;">
+                <div class="intro">
+                  <h4><b>Sabeen Govind</b></h4>
+                  <!-- <p>Architect & Engineer</p> -->
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/diljith.jpg" alt="Avatar" style="width:200px;height: 100%;">
+                <div class="intro">
+                  <h4><b>Diljith K Benny</b></h4>
+                  <!-- <p>Architect & Engineer</p> -->
+                </div>
+            </div>
+        </div>
+                
+    </section>
+
+
+    
+    <!-- About Us Section -->
+    <section id="about">
+        <br><br><br><br><br><br>
+        <center>
+            <div class="slider-banner" id="recruiterstab">
+                <center><h1 style="text-align: center;color: rgb(0, 0, 0);">About Us</h1></center>
+            </div>
+        </center>
+        <footer>
+            <!-- <link href='icons.css' rel='stylesheet'> -->
+        <!-- <section id="about"> -->
+        <div id="pic">
+            <img src="img/RajagiriLogo.png"alt="">
+            <div id="intro">
+                <h2>RAJAGIRI COLLEGE OF <br> SOCIAL SCIENCES
+                <br> <h3>(AUTONOMOUS)</h3></h2>
+            </div>
+            <div class="icons1">
+                <p class="ic"><img src="img/location.png">Rajagiri College of Social Sciences (Autonomous), 
+                    <br>P.O, Kalamassery,<br>
+                    Cochin - 683 104, Kerala, India.</p>
+                <p class="ic"><img src="img/telephone1.jpeg">+91 484 - 2911111 / 2911507</p>
+                <p class="ic"><img src="img/telephone.png">+91-9645081287</p>
+                <p class="ic"><img src="img/mail.png">admin@rajagiri.edu</p> 
+
+            </div>               
+        </div>
+        
+        
+          <div class="media">
+            <a href="https://www.facebook.com/people/Rajagiri-College-of-Social-Sciences-Autonomous/100067140653830/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/rcbs_rajagiri/status/1271109966011592704" class="fa fa-twitter"></a>
+            <a href="https://rajagiri.edu/" class="fa fa-google"></a>
+            <a href="https://www.linkedin.com/school/rajagiri-college-of-social-sciences-autonomous/?originalSubdomain=in" class="fa fa-linkedin"></a>
+            <a href="https://www.instagram.com/rcss.live/?hl=en" class="fa fa-instagram"></a>
+          </div>
+          <!-- Add font awesome icons -->
+          
+            <br>
+            <br>
+            <br>
+        <div class="footer-bottom text-center">
+            Copyright ©
+            <script>
+               document.write(new Date().getFullYear());
+            </script>-2023 All Rights Reserved | Rajagiri College Of Social Sciences (Autonomous)P.O, Kalamassery,Cochin - 683 104, Kerala, India.
+         </div>
+        
+    </body>
+</footer>
+    </section>
+    <script>
+        const li=document.querySelectorAll(".links");
+        const sec=document.querySelectorAll("section");
+
+        function activeMenu(){
+            let len=sec.length;
+            while(--len && window.scrollY + 97 < sec[len].offsetTop){}
+            li.forEach(ltx => ltx.classList.remove("active"));
+            li[len].classList.add("active");
+        }
+        activeMenu();
+        window.addEventListener("scroll",activeMenu);
+    </script>
+    
+    
+    <!-- Content of slidebar  -->
+    <div class="sidebar-contact">
+        <div class="toggle"></div>
+        <h2>Contact Us</h2>
+        <div class="scroll">
+        <a href="#">> Overview</a><br>
+        <a href="#">> Superm Dream Offers</a><br>
+        <a href="#">> Dream Offer</a><br>
+        <a href="#">> Internship & Placement</a><br>
+        <a href="#">> Statistics</a><br>
+        <a href="#">> CDC Office</a><br>
+        <a href="#">> Contact us</a><br>
+        </div>
+      </div>    
+</body>
+</html>
