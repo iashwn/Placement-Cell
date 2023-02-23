@@ -121,7 +121,7 @@ section h1{
 #home{
   display: flex;/*useeee thisss*/
   /* background: url(""); */
-  background: url(/img/college.jpg);
+  background: url(../img/college.jpg);
   color: aliceblue;
   position: relative;
   justify-content: center;
